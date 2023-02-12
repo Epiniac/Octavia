@@ -16,8 +16,6 @@ typedef struct{real Re; real Im;} complex;
 #define PI	3.14159265358979323846264338327950288
 #endif
 
-
-
 static void print_vector(const char *title,complex *x,int n)
 {
   	int i;
