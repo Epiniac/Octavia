@@ -1,20 +1,3 @@
-/* FFT subroutine for WaoN with FFTW library
- * Copyright (C) 1998-2013 Kengo Ichiki <kengoichiki@gmail.com>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- */
 
 #include <math.h>
 #include <stdlib.h> /* realloc()  */
@@ -31,13 +14,6 @@
 
 #include "hc.h" // HC_to_amp2()
 
-
-/* Reference: "Numerical Recipes in C" 2nd Ed.
- * by W.H.Press, S.A.Teukolsky, W.T.Vetterling, B.P.Flannery
- * (1992) Cambridge University Press.
- * ISBN 0-521-43108-5
- * Sec.13.4 - Data Windowing
- */
 double
 parzen (int i, int nn)
 {
@@ -60,11 +36,6 @@ hanning (int i, int nn)
   return ( 0.5 * (1.0 - cos (2.0*M_PI*(double)i/(double)(nn-1))) );
 }
 
-/* Reference: "Digital Filters and Signal Processing" 2nd Ed.
- * by L. B. Jackson. (1989) Kluwer Academic Publishers.
- * ISBN 0-89838-276-9
- * Sec.7.3 - Windows in Spectrum Analysis
- */
 double
 hamming (int i, int nn)
 {
