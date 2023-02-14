@@ -23,7 +23,7 @@ void ToArray(char *fichier_wave)
    fclose(file);
    for (size_t i = 0; i<size-1; i++)
      {
-       printf("%ld \n",data[i]);
+       printf("%d \n",data[i]);
      }
    //printf("%s\n",data);
 }
