@@ -1,0 +1,175 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: century;
+}
+
+header{
+    
+    /*image de fond*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(./Images/piano-g5ebec268b_1920.jpg);
+    height: 100vh;
+    
+}
+
+.logo a{
+    /*color:rgb(100, 45, 0);*/
+    padding: 0px 20px;
+    /*couleur encadrement*/
+    /*border: 2px solid rgba(100, 45, 0);*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /*met le text en majuscules*/
+    text-transform: uppercase;
+    /*souligne le texte*/
+    text-decoration: none ;
+    /*taille de l'encadrement*/
+    font-weight: 900;
+    font-style: normal;
+    /*ajouter le sous acceuil*/
+    text-shadow: rgba(226, 5, 126, 0.226);
+}
+
+.logo span{
+    color: rgb(226, 5, 127);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(56, 26, 2);
+    /*espace entre les catégories du haut*/
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: 8px inset rgba(83, 16, 52, 0.726) transparent;
+    /*mettre espace entre les catégories*/
+    margin: 10px ;
+    font-weight: 500;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background:rgba(83, 16, 52, 0.589);
+    color: rgb(56, 26, 2);
+}
+
+ul li.active a{
+    background:rgba(83, 16, 52, 0.589);
+    color: rgb(56, 26, 2);
+}
+
+.principale{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.titre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titre h1{
+    color: rgb(56, 26, 2);
+    font-size: 70px;
+}
+
+.bouton{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bouton a{
+    color: rgb(37, 19, 4);
+    text-decoration: none;
+    border: 5px inset rgba(83, 16, 52, 0.24) ;
+    padding: 10px 20px;
+
+}
+
+.btn{
+    transition: 0,6s ease;
+
+}
+.btn:hover{
+    background:rgba(48, 16, 33, 0.329);
+    color: rgb(24, 12, 3);
+
+}
+
+.projet h3{
+    position: absolute;
+    color: rgb(37, 19, 4);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 5px inset rgba(83, 16, 52, 0.24) ;
+    font-size: 35px;
+    top: 35%;
+    right: 70%; 
+}
+
+.projet p{
+    position: absolute;
+    color: rgb(37, 19, 4);
+    background-color: rgba(78, 24, 54, 0.205);
+    font-size: 20px;
+    left: 30%;
+    top: 45%;
+    right: 30%;
+}
+
+.membres h4{
+    position: absolute;
+    color: rgb(46, 15, 3);
+    font-size: 20px;
+    left: 30%;
+    top: 50%;
+    right: 30%;
+    
+}
+.membres h5{
+    position: absolute;
+    color: rgb(46, 15, 3);
+    font-size: 20px;
+    left: 30%;
+    top: 45%;
+    right: 30%;
+    
+}
+.membres h6{
+    position: absolute;
+    color: rgb(46,15,3);
+    font-size: 20px;
+    left: 30%;
+    top: 40%;
+    right: 30%;
+    
+}
+.membres h7{
+    position: absolute;
+    color: rgb(46,15,3);
+    font-size: 20px;
+    left: 30%;
+    top: 35%;
+    right: 30%;
+    
+}
+
+
+
+
+
+
