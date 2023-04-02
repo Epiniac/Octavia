@@ -1,10 +1,10 @@
 CC = gcc
-CFLAGS = -lm
+CFLAGS = -lm -lsndfile -lfftw3 -lfftw3f
 TARGET = main
 
 all: $(TARGET)
 
-$(TARGET): main_program.c
+$(TARGET): detect.c
 	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
