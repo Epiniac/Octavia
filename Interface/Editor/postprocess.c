@@ -5,6 +5,7 @@
 
 SDL_Surface *postprocess(char* p) 
 {
+	
     SDL_Surface* temp = IMG_Load(TEMPLATE);
     SDL_Surface* result = SDL_ConvertSurfaceFormat(temp, SDL_PIXELFORMAT_RGB888 , 0);
     SDL_FreeSurface(temp);
@@ -23,6 +24,7 @@ SDL_Surface *postprocess(char* p)
     // la : y = -3
     // si : y = -7 
     
+    printf("Starting now...\n");
     int x = 40;
     int y;
     if (strcmp(note, "C") == 0 || strcmp(note, "C#") == 0)
@@ -41,6 +43,10 @@ SDL_Surface *postprocess(char* p)
 	y = -7;
 
     add_note(result, x, y);
+
+    printf("I guess you note is: %s\n", note);
+
+    printf("Done !\n");
     
     return result;
 }

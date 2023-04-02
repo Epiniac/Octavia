@@ -1,18 +1,18 @@
 # Makefile
 
-CC = gcc -g
+CC = gcc 
 CPPFLAGS = -MMD
 CFLAGS = -Wall -Wextra
 LDFLAGS =
-LDLIBS = `pkg-config --libs sdl2 SDL2_image SDL2_ttf`
+LDLIBS = -lm -lsndfile -lfftw3 -lfftw3f `pkg-config --libs sdl2 SDL2_image SDL2_ttf`
 
-SRC = main.c create_image.c postprocess.c
+SRC = main.c create_image.c postprocess.c ../../V2/detect.c
 OBJ = ${SRC:.c=.o}
 DEP = ${SRC:.c=.d}
 
 main: ${OBJ}
 
--include ${DEP}
+-include DEP
 
 .PHONY: clean
 

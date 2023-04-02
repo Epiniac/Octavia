@@ -61,7 +61,7 @@ void ToSpectrum2(char *wave_file)
     data = (uint16_t*)malloc(header.subchunk2_size);
     fread(data, header.subchunk2_size, 1, wavefile);
     samples = (double*)malloc(header.subchunk2_size);
-    for (int i = 0; i < header.subchunk2_size / 2; i++)
+    for (uint32_t i = 0; i < header.subchunk2_size / 2; i++)
     {
         samples[i] = ((double)(int16_t)data[i]) / 32767.0;
         printf("EST LA\n");
@@ -71,7 +71,7 @@ void ToSpectrum2(char *wave_file)
     fft(samples, header.subchunk2_size / 2, spectrum);
     outfile = fopen("new.csv", "w");
     
-    for (int i=0; i<header.subchunk2_size/4;i++)
+    for (uint32_t i=0; i<header.subchunk2_size/4;i++)
     {
         fprintf(outfile, "%f,", spectrum[i]);
     }
@@ -87,10 +87,10 @@ void ToSpectrum2(char *wave_file)
 void ToSpectrum(char *fichier_wave)
 {
     SF_INFO sfinfo;
-    SNDFILE* infile = sf_open("audio_file.wav", SFM_READ, &sfinfo);
+    SNDFILE* infile = sf_open(fichier_wave, SFM_READ, &sfinfo);
     
     float* buf = malloc(sfinfo.frames * sizeof(float));
-    long numFrames = sf_readf_float(infile, buf, sfinfo.frames);
+    //long numFrames = sf_readf_float(infile, buf, sfinfo.frames);
 
     int N = sfinfo.frames;
     double* in, * out;
@@ -183,7 +183,7 @@ void ToArray(char *fichier_wave)
    fclose(file);
 
    double max = 0;
-   for (size_t i = 0; i<size-1; i++)
+   for (int i = 0; i<size-1; i++)
      {
        if (max < data[i])
            max = data[i];
@@ -211,7 +211,7 @@ int return_n(char* p)
   return n;
 }
 
-int main (int argc, char **argv)
+/*int main (int argc, char **argv)
 {
   if (argc != 2)
     {
@@ -226,18 +226,18 @@ int main (int argc, char **argv)
       sleep(1);
       //frequency = TakeFrequency(argv[1]);
 
-      /*double a = 440;
-      ratio = pow(2.0, 1.0/12.0);
-      double a_ratio = frequency/a;
-      int n = 12 * log(a_ratio) / log(ratio);
-      if (n<0)
-      {
-      	n += 12;
-      }
-      n = n % 12;*/
+      //double a = 440;
+      //ratio = pow(2.0, 1.0/12.0);
+      //double a_ratio = frequency/a;
+      //int n = 12 * log(a_ratio) / log(ratio);
+      //if (n<0)
+      //{
+      //	n += 12;
+      //}
+      //n = n % 12;
       printf("The note is %s\n", notes[return_n(argv[1])]);
       printf("Done! \n");
 
       return 0;
     }
-}
+} */
