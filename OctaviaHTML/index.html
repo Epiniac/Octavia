@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MusicSheet</title>
+
+	<script src="https://kit.fontawesome.com/4fd97b1926.js" crossorigin="anonymous"></script>
+	<!----custom css link---->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+	<!-- or -->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/1.2.92/vexflow-min.js"></script>
+
+</head>
+
+<body>
+
+	<!---header design--->
+	<header>
+		<a href="index.html" class="logo"><i class='bx bxs-music'></i>Octavia</a>
+
+		<ul class="navbar">
+			<li><a href="#Transcription" class="active">Transcription</a></li>
+			<li><a href="about.html">Our Group</a></li>
+			<li><a href="https://github.com/Epiniac/Octavia.git" class="active">Project Source Code</a></li>
+			
+		</ul>
+
+		<div class="header-icons">
+			<i class='bx bxs-user-circle'></i>
+			<a href="signin.html">Login</a>
+		</div>
+
+	</header>
+
+
+
+	<!---home design--->
+	<section class="home">
+		<div class="home-img">
+			<img src="img/header-mockup.png" class="one">
+		</div>
+
+		<div class="home-text">
+			<h1>Melody <br> Scanner</h1>
+			<h5>Make Music your personal life</h5>
+			<a href="#Transcription" class="btn">GET STARTED FOR FREE</a>
+		</div>
+	</section>
+
+	<div class="main">
+		<div class="row">
+			<li><img src="img/saxophone.svg" onclick="slider('img/saxo.jpg')"></li>
+		</div>
+
+		<div class="row row2">
+			<li><img src="img/bass-guitar.svg" onclick="slider('img/header-bg.jpeg')"></li>
+		</div>
+
+		<div class="row row3">
+			<li><img src="img/piano.svg" onclick="slider('img/review-bg.jpeg')"></li>
+		</div>
+
+	</div>
+
+	<a href="#" class="bottom">Scroll Down<i class='bx bx-down-arrow-circle'></i></a>
+
+
+	<!-- manual section -->
+
+	<section id="how-it-works">
+
+		<div class="roww">
+			<div class="col-4">
+				<i class="fas fa-music"></i>
+				<h3>Upload Audio</h3>
+				<p>Upload an audio file of the music you want to transcribe to Eplnote.</p>
+			</div>
+			<div class="col-4">
+				<i class="fas fa-pencil-alt"></i>
+				<h3>Transcribe</h3>
+				<p>Eplnote uses advanced algorithms to transcribe the music into sheet music.</p>
+			</div>
+			<div class="col-4">
+				<i class="fas fa-download"></i>
+				<h3>Download Sheet Music</h3>
+				<p>Download the sheet music as a PDF file and start playing!</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Transcription section -->
+
+	<section id="Transcription">
+
+		<div class="upload-form">
+			<h1>Upload your audio file</h1>
+			<form>
+				<input type="file" id="audio-file" accept=".mp3,.wav,.midi">
+				<button type="button" class="upload-btn" onclick="uploadAudio()">Upload</button>
+			</form>
+		</div>
+
+		<div class="transcription-image">
+			<img src="img/editor-mockup.png">
+
+		</div>
+
+	</section>
+	<footer>
+		<div class="containe">
+			<ul>
+				<li>Facebook</li>
+				<li>Twitter</li>
+				<li>Instagram</li>
+			</ul>
+
+			<p>&copy; 2023 Epiniac. All rights reserved.</p>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>
