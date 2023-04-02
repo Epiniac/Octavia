@@ -1,4 +1,7 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "postprocess.h"
+#include "../../V2/detect.h"
 
 SDL_Surface *postprocess(char* p) 
 {
@@ -8,7 +11,7 @@ SDL_Surface *postprocess(char* p)
 
     char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
     int n = return_n(p);
-    char note = *notes[n];
+    char* note = notes[n];
 
     // x et y inverse
     // 50
@@ -22,19 +25,19 @@ SDL_Surface *postprocess(char* p)
     
     int x = 40;
     int y;
-    if (note == 'C' || note == "C#")
+    if (strcmp(note, "C") == 0 || strcmp(note, "C#") == 0)
 	y = 16;
-    else if (note == "D" || note == "D#")
+    else if (strcmp(note, "D") == 0 || strcmp(note, "D#") == 0)
 	y = 12;
-    else if (note == "E")
+    else if (strcmp(note, "E") == 0)
 	y = 8;
-    else if (note == "F" || note == "F#")
+    else if (strcmp(note, "F") == 0 || strcmp(note, "F#") == 0)
 	y = 5;
-    else if (note == "G" || note == "G#")
+    else if (strcmp(note, "G") == 0  || strcmp(note, "G#") == 0 )
 	y = 1;
-    else if (note == "A" || note == "A#")
+    else if (strcmp(note, "A") == 0  || strcmp(note, "A") == 0 )
 	y = -3;
-    else if (note == "B")
+    else if (strcmp(note, "B") == 0 )
 	y = -7;
 
     add_note(result, x, y);

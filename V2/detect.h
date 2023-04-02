@@ -1,3 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <err.h>
+#include <stdlib.h>
+
+#include <sndfile.h>
+#include <math.h>
+#include <fftw3.h>
+#include <unistd.h>
+
 #ifndef DETECT_H
 #define DETECT_H
 

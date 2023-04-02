@@ -2,7 +2,7 @@
 
 CC = gcc -g
 CPPFLAGS = -MMD
-CFLAGS = -Wall -Wextra `pkg-config --cflags sdl2 SDL2_image SDL2_ttf`
+CFLAGS = -Wall -Wextra
 LDFLAGS =
 LDLIBS = `pkg-config --libs sdl2 SDL2_image SDL2_ttf`
 
