@@ -1,10 +1,12 @@
 #include "postprocess.h"
 
-SDL_Surface *postprocess() 
+SDL_Surface *postprocess(char p) 
 {
     SDL_Surface* temp = IMG_Load(TEMPLATE);
     SDL_Surface* result = SDL_ConvertSurfaceFormat(temp, SDL_PIXELFORMAT_RGB888 , 0);
     SDL_FreeSurface(temp);
+
+    char note = return_n(p);
 
     // x et y inverse
     // 50
