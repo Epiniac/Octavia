@@ -14,7 +14,7 @@
           <object class="GtkImage">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="pixbuf">../../Téléchargements/octavia_logo(1).png</property>
+            <property name="pixbuf">octavia_logo.png</property>
           </object>
           <packing>
             <property name="resize">False</property>
@@ -32,7 +32,8 @@
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkButton" id="button1">
-                    <property name="label" translatable="yes">button</property>
+                    <property name="label" translatable="yes">ADD
+new key</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
@@ -44,7 +45,8 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button2">
-                    <property name="label" translatable="yes">button</property>
+                    <property name="label" translatable="yes">REMOVE
+selected key</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
@@ -64,7 +66,7 @@
               <object class="GtkImage" id="notesheet">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="pixbuf">../../Images/Itron_santez_anna_partition.gif</property>
+                <property name="pixbuf">empty.jpg</property>
               </object>
               <packing>
                 <property name="resize">True</property>
