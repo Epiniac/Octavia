@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#define RECORD "arecord --format=cd file.mp3"
+#define RECORD "arecord --format=cd file.wav"
 int main()
 {
 	//puts(RECORD);
