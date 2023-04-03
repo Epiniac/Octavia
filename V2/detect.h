@@ -28,6 +28,6 @@ double TakeFrequency(char* wave_file);
 
 void ToArray(char* wave_file);
 
-char return_n(char *p);
+int return_n(char *p);
 
 #endif

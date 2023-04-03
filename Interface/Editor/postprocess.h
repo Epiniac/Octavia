@@ -8,7 +8,7 @@
 
 #define TEMPLATE "empty.png"
 
-SDL_Surface *postprocess();
+SDL_Surface *postprocess(char* p);
 
 #endif
 

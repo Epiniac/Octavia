@@ -192,11 +192,9 @@ void ToArray(char *fichier_wave)
    printf("%f\n",max);
 }
 
-char return_n(char *p)
+int return_n(char* p)
 {
-  double frequency, ratio;
-  char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-  
+  double frequency, ratio; 
   frequency = TakeFrequency(p);
 
   double a = 440;
@@ -209,7 +207,7 @@ char return_n(char *p)
   }
   n = n % 12;
 
-  return notes[n];
+  return n;
 }
 
 int main (int argc, char **argv)
@@ -221,7 +219,7 @@ int main (int argc, char **argv)
   else
     {
       //double frequency, ratio;
-      //char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+      char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
 
       printf("Detection starting... \n");
       sleep(1);
@@ -236,7 +234,8 @@ int main (int argc, char **argv)
       	n += 12;
       }
       n = n % 12;*/
-      printf("The note is %s\n", return_n(argv[1]);
+      int n = return_n(argv[1]);
+      printf("The note is %s\n", notes[n]);
       printf("Done! \n");
 
       return 0;

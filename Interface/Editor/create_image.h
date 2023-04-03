@@ -10,6 +10,6 @@
     #define CELL_SIZE 50
 #endif
 
-void add_note(SDL_Surface *res, int x, int y, char text);
+void add_note(SDL_Surface *res, int x, int y);
 
 #endif

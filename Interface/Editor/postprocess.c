@@ -1,12 +1,14 @@
 #include "postprocess.h"
 
-SDL_Surface *postprocess(char p) 
+SDL_Surface *postprocess(char* p) 
 {
     SDL_Surface* temp = IMG_Load(TEMPLATE);
     SDL_Surface* result = SDL_ConvertSurfaceFormat(temp, SDL_PIXELFORMAT_RGB888 , 0);
     SDL_FreeSurface(temp);
 
-    char note = return_n(p);
+    char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+    int n = return_n(p);
+    char* note = notes[n];
 
     // x et y inverse
     // 50
