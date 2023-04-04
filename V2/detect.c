@@ -196,6 +196,7 @@ int return_n(char* p)
 {
   double frequency, ratio; 
   frequency = TakeFrequency(p);
+  //char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
 
   double a = 440;
   ratio = pow(2.0, 1.0/12.0);
@@ -234,8 +235,7 @@ int main (int argc, char **argv)
       	n += 12;
       }
       n = n % 12;*/
-      int n = return_n(argv[1]);
-      printf("The note is %s\n", notes[n]);
+      printf("The note is %s\n", notes[return_n(argv[1])]);
       printf("Done! \n");
 
       return 0;

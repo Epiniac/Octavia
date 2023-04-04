@@ -8,7 +8,7 @@ SDL_Surface *postprocess(char* p)
 
     char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
     int n = return_n(p);
-    char* note = notes[n];
+    char note = *notes[n];
 
     // x et y inverse
     // 50
@@ -22,7 +22,7 @@ SDL_Surface *postprocess(char* p)
     
     int x = 40;
     int y;
-    if (note == "C" || note == "C#")
+    if (note == 'C' || note == "C#")
 	y = 16;
     else if (note == "D" || note == "D#")
 	y = 12;
