@@ -3,6 +3,36 @@
 #include <err.h>
 #include <stdlib.h>
 
+#include <math.h>
+//#include <fftw.h>
+
+#define N 1024
+#define Fs 10000
+
+int fourier(void)
+{
+  double signal[N];
+  for(int i=0i<N;i++)
+    {
+      signal[i] = sin(2.0*M_PI*1000*i/Fs) + 0.5*sin(2.0*M_PI*2000*i/Fs);
+    }
+  fftw_complex* out =fftw_malloc(sizeof(fftw_complex)*N);
+  fftw_plan plan = fftw_plan_dft_r2c_1d(N,signal,out,FFTW_ESTIMATE);
+  fftw_execute(plan);
+  for(int i =0; i<N/2+1,i++)
+    {
+      double freq = i*Fs/N;
+      double mag = sqrt(out[i][0]*out[i][0]+out[i][1]*out[i][1]);
+      printf(%lf,%lf,freq,mag);
+    }
+
+  fftw_destro_plan(plan);
+  fftw_free(out);
+
+  return 0;
+}
+
+
 
 void ToArray(char *fichier_wave)
 {
@@ -27,6 +57,7 @@ void ToArray(char *fichier_wave)
      }
    //printf("%s\n",data);
 }
+
 
 
 int main (int argc, char **argv)
