@@ -194,20 +194,11 @@ void ToArray(char *fichier_wave)
 
 int return_n(char* p)
 {
-  double frequency, ratio; 
+  double frequency;
   frequency = TakeFrequency(p);
   //char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-
-  double a = 440;
-  ratio = pow(2.0, 1.0/12.0);
-  double a_ratio = frequency/a;
-  int n = 12 * log(a_ratio) / log(ratio);
-  if (n<0)
-  {
-    n += 12;
-  }
-  n = n % 12;
-
+  
+  int n = (int)((12 * log2(frequency/440.0))+49) % 12;
   return n;
 }
 
