@@ -98,7 +98,7 @@
             <property name="height-request">80</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="pixbuf">octavia_logo(1).png</property>
+            <property name="pixbuf">images/octavia_logo.png</property>
           </object>
         </child>
         <child>
@@ -116,10 +116,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="add_2">
-            <property name="label" translatable="yes">button</property>
+          <object class="GtkButton" id="add_croche">
+            <property name="label" translatable="yes"> </property>
             <property name="width-request">70</property>
-            <property name="height-request">50</property>
+            <property name="height-request">70</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
@@ -127,62 +127,34 @@
           <packing>
             <property name="x">20</property>
             <property name="y">410</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="add_3">
-            <property name="label" translatable="yes">button</property>
-            <property name="width-request">70</property>
-            <property name="height-request">50</property>
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
-          </object>
-          <packing>
-            <property name="x">20</property>
-            <property name="y">480</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="add_4">
-            <property name="label" translatable="yes">button</property>
+            <property name="label" translatable="yes"> </property>
             <property name="width-request">70</property>
-            <property name="height-request">50</property>
+            <property name="height-request">70</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
           </object>
           <packing>
-            <property name="x">125</property>
+            <property name="x">110</property>
             <property name="y">410</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="add_5">
-            <property name="label" translatable="yes">button</property>
+          <object class="GtkButton" id="add_noires">
+            <property name="label" translatable="yes"> </property>
             <property name="width-request">70</property>
-            <property name="height-request">50</property>
+            <property name="height-request">70</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
           </object>
           <packing>
-            <property name="x">125</property>
-            <property name="y">340</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="add_6">
-            <property name="label" translatable="yes">button</property>
-            <property name="width-request">70</property>
-            <property name="height-request">50</property>
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
-          </object>
-          <packing>
-            <property name="x">125</property>
-            <property name="y">480</property>
+            <property name="x">110</property>
+            <property name="y">333</property>
           </packing>
         </child>
         <child>
@@ -191,7 +163,7 @@
             <property name="height-request">80</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="pixbuf">empty.jpg</property>
+            <property name="pixbuf">images/empty.jpg</property>
           </object>
           <packing>
             <property name="x">330</property>
@@ -204,11 +176,50 @@
             <property name="height-request">80</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="pixbuf">blanches-removebg-preview(3).png</property>
+            <property name="pixbuf">images/images_notes/note_blanche.png</property>
           </object>
           <packing>
             <property name="x">3</property>
             <property name="y">330</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">images/images_notes/note_croche.png</property>
+          </object>
+          <packing>
+            <property name="x">7</property>
+            <property name="y">406</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">images/images_notes/note_noires.png</property>
+          </object>
+          <packing>
+            <property name="x">96</property>
+            <property name="y">332</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">images/images_notes/note_croches.png</property>
+          </object>
+          <packing>
+            <property name="x">94</property>
+            <property name="y">405</property>
           </packing>
         </child>
       </object>
