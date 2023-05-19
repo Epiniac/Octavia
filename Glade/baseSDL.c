@@ -1,52 +1,47 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
 #include <gtk/gtk.h>
+#include <ctype.h>
+#include <math.h>
+#include <unistd.h>
+#include <string.h>
+#include <gtk/gtkx.h>
 
-int main(int argc, char *argv[]) {
-    // ...
-
-    // Chargement de l'interface Glade
-    GtkBuilder *builder;
-    builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "editor.glade", NULL);
-
-    GtkWidget *window;
-    window = GTK_WIDGET(gtk_builder_get_object(builder,"menu")
-   
-   //initialisation boutons des notes:
-   GtkWidget *add_blanches;
-   add_blanches = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
-   
-   GtkWidget *add_noires;
-   add_noires = GTK_WIDGET(gtk_builder_get_object(builder, "add_noires"));
-
-   GtkWidget *add_croche;
-   add_croche = GTK_WIDGET(gtk_builder_get_object(builder, "add_croche"));
-
-   GtkWidget *add_4;
-   add_4 = GTK_WIDGET(gtk_builder_get_object(builder, "add_4"));
+GtkBuilder *builder;
+GtkWidget *window;
+GtkWidget *add_blanches;
+GtkWidget *add_noires;
+GtkWidget *add_croche;
+GtkWidget *add_4;
 
 
-    // Connexions des signaux Glade
-    gtk_builder_connect_signals(builder, NULL);
+int main(int argc, char *argv[])
+{
+	gtk_init(&argc,&argv); //init GTK
 
-    // Connexions des signaux Glade boutons notes
-    g_signal_connect(add_blanche, "clicked", G_CALLBACK(nom_de_la_fonction_callback), NULL);
-    g_signal_connect(add_noires, "clicked", G_CALLBACK(nom_de_la_fonction_callback), NULL);
-    g_signal_connect(add_croche, "clicked", G_CALLBACK(nom_de_la_fonction_callback), NULL);
-    g_signal_connect(add_4, "clicked", G_CALLBACK(nom_de_la_fonction_callback), NULL);
+//establish contact with xml code used to adjust widget settings
 
-    // Affichage de la fenêtre
-    gtk_widget_show(window);
+	builder = gtk_builder_new_from_file("editor.glade");
+	
+	window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
 
-    // Boucle principale GTK+
-    gtk_main();
+	gtk_builder_connect_signals(builder, NULL);
 
-    // ...
+	add_blanches = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
+	add_noires = GTK_WIDGET(gtk_builder_get_object(builder,"add_noires"));
+	add_croche = GTK_WIDGET(gtk_builder_get_object(builder,"add_croche"));
+	add_4 = GTK_WIDGET(gtk_builder_get_object(builder,"add_4"));
 
-    return 0;
+	gtk_widget_show(window);
+	gtk_main();
+	
+	return EXIT_SUCCESS;
 }
 
+void test_click(GtkButton *b)
+{
+	gtk_label_set_text(GTK_LABEL(add_blanches),(const gchar*) "Hello Wold");
+}
 
 
 
