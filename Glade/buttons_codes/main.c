@@ -2,7 +2,7 @@
 #include "download.c"
 #include "delete.c"
 #include "new.c"
-#include "add.c"
+//#include "add.c"
 
 
 int main(int argc, char* argv[]) {
