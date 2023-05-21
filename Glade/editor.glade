@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.40.0 -->
+<!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="main_window">
@@ -16,8 +16,6 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="activate" handler="activate" swapped="no"/>
-            <signal name="clicked" handler="clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">20</property>
@@ -222,6 +220,83 @@
           <packing>
             <property name="x">94</property>
             <property name="y">405</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEventBox" id="box1">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">images/images_notes/note_blanche.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">400</property>
+            <property name="y">270</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEventBox" id="box2">
+            <property name="name">test2</property>
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">images/images_notes/note_noires.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">328</property>
+            <property name="y">264</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEventBox" id="box3">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">images/images_notes/note_croche.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">500</property>
+            <property name="y">264</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEventBox" id="box4">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">images/images_notes/note_croches.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">600</property>
+            <property name="y">270</property>
           </packing>
         </child>
       </object>
