@@ -2,6 +2,7 @@
 #include "download.c"
 #include "delete.c"
 #include "new.c"
+#include "add.c"
 
 
 int main(int argc, char* argv[]) {
@@ -18,8 +19,8 @@ int main(int argc, char* argv[]) {
     GtkWidget *box3 = GTK_WIDGET(gtk_builder_get_object(builder, "box3"));
     GtkWidget *box4 = GTK_WIDGET(gtk_builder_get_object(builder, "box4"));
     GtkWidget *new_button = GTK_WIDGET(gtk_builder_get_object(builder, "new_button"));
-    GtkWidget *empty_partition = GTK_WIDGET(gtk_builder_get_object(builder, "partition2"));
-
+    GtkWidget *fixed = GTK_WIDGET(gtk_builder_get_object(builder, "fixed"));
+    GtkWidget *add_blanche = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
     
     // Perform any necessary modifications to the interface                                                                                                                           
     g_signal_connect(download, "clicked", G_CALLBACK(download_button), NULL);
@@ -29,7 +30,9 @@ int main(int argc, char* argv[]) {
     g_signal_connect(box2, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
     g_signal_connect(box3, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
     g_signal_connect(box4, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
-    g_signal_connect(new_button, "clicked", G_CALLBACK(new_partition), empty_partition);
+    g_signal_connect(new_button, "clicked", G_CALLBACK(new_partition), fixed);
+    g_signal_connect(add_blanche, "clicked", G_CALLBACK(load_image),fixed);
+    g_signal_connect(window, "button-press-event", G_CALLBACK(print_image), fixed);
 
 
     g_object_unref(builder);

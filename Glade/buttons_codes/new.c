@@ -1,9 +1,10 @@
-void new_partition(GtkButton *button, gpointer user_data)
+void new_partition(GtkWidget *widget, gpointer user_data)
 {
-  GtkImage *image = user_data;
-   // Associer un chemin à la GtkImage                                                                                                                                               
-    const gchar *chemin_image = "../images/empty.jpg";
-    gtk_image_set_from_file(GTK_IMAGE(image), chemin_image);
-
+    GtkWidget *fixed = user_data;
+    GtkWidget *window = gtk_widget_get_parent(fixed);                                                                                                 
+    GtkWidget *image = gtk_image_new_from_file("../images/empty.jpg");
+    gtk_container_add(GTK_CONTAINER(fixed), image);
+    gtk_fixed_move(GTK_FIXED(fixed), GTK_WIDGET(image), 330, 250);
+    gtk_widget_show_all(window);
 }
 
