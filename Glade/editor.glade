@@ -158,19 +158,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkImage" id="partition">
-            <property name="width-request">100</property>
-            <property name="height-request">80</property>
-            <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="pixbuf">images/empty.jpg</property>
-          </object>
-          <packing>
-            <property name="x">330</property>
-            <property name="y">250</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkImage" id="image_blanche">
             <property name="width-request">100</property>
             <property name="height-request">80</property>
@@ -223,6 +210,19 @@
           </packing>
         </child>
         <child>
+          <object class="GtkImage" id="partition">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">images/empty.jpg</property>
+          </object>
+          <packing>
+            <property name="x">330</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkEventBox" id="box1">
             <property name="width-request">100</property>
             <property name="height-request">80</property>
@@ -238,31 +238,11 @@
           </object>
           <packing>
             <property name="x">400</property>
-            <property name="y">270</property>
+            <property name="y">250</property>
           </packing>
         </child>
         <child>
           <object class="GtkEventBox" id="box2">
-            <property name="name">test2</property>
-            <property name="width-request">100</property>
-            <property name="height-request">80</property>
-            <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <child>
-              <object class="GtkImage">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="pixbuf">images/images_notes/note_noires.png</property>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="x">328</property>
-            <property name="y">264</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEventBox" id="box3">
             <property name="width-request">100</property>
             <property name="height-request">80</property>
             <property name="visible">True</property>
@@ -277,11 +257,11 @@
           </object>
           <packing>
             <property name="x">500</property>
-            <property name="y">264</property>
+            <property name="y">250</property>
           </packing>
         </child>
         <child>
-          <object class="GtkEventBox" id="box4">
+          <object class="GtkEventBox" id="box3">
             <property name="width-request">100</property>
             <property name="height-request">80</property>
             <property name="visible">True</property>
@@ -295,8 +275,39 @@
             </child>
           </object>
           <packing>
-            <property name="x">600</property>
-            <property name="y">270</property>
+            <property name="x">450</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEventBox" id="box4">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">images/images_notes/note_noires.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">350</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage" id="partition2">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="x">330</property>
+            <property name="y">250</property>
           </packing>
         </child>
       </object>
