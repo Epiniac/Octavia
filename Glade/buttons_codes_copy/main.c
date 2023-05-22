@@ -20,7 +20,10 @@ int main(int argc, char* argv[]) {
     GtkWidget *box4 = GTK_WIDGET(gtk_builder_get_object(builder, "box4"));
     GtkWidget *new_button = GTK_WIDGET(gtk_builder_get_object(builder, "new_button"));
     GtkWidget *fixed = GTK_WIDGET(gtk_builder_get_object(builder, "fixed"));
-    GtkWidget *add_blanche = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
+    add_blanches = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
+    add_croche = GTK_WIDGET(gtk_builder_get_object(builder, "add_croche"));
+    add_4 = GTK_WIDGET(gtk_builder_get_object(builder,"add_4"));
+    add_noires = GTK_WIDGET(gtk_builder_get_object(builder,"add_noires"));
     
     // Perform any necessary modifications to the interface                                                                                                                           
     g_signal_connect(download, "clicked", G_CALLBACK(download_button), NULL);
@@ -31,8 +34,12 @@ int main(int argc, char* argv[]) {
     g_signal_connect(box3, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
     g_signal_connect(box4, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
     g_signal_connect(new_button, "clicked", G_CALLBACK(new_partition), fixed);
-    g_signal_connect(add_blanche, "clicked", G_CALLBACK(load_image),fixed);
+    g_signal_connect(add_blanches, "clicked", G_CALLBACK(load_image),fixed);
+    g_signal_connect(add_croche, "clicked", G_CALLBACK(load_image),fixed);
+    g_signal_connect(add_4, "clicked", G_CALLBACK(load_image),fixed);
+    g_signal_connect(add_noires, "clicked", G_CALLBACK(load_image),fixed);
     g_signal_connect(window, "button-press-event", G_CALLBACK(print_image), fixed);
+
 
 
     g_object_unref(builder);
