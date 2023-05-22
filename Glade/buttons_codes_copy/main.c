@@ -2,7 +2,7 @@
 #include "download.c"
 #include "delete.c"
 #include "new.c"
-//#include "add.c"
+#include "quit.c"
 
 
 int main(int argc, char* argv[]) {
@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
     add_croche = GTK_WIDGET(gtk_builder_get_object(builder, "add_croche"));
     add_4 = GTK_WIDGET(gtk_builder_get_object(builder,"add_4"));
     add_noires = GTK_WIDGET(gtk_builder_get_object(builder,"add_noires"));
+    GtkWidget *quit = GTK_WIDGET(gtk_builder_get_object(builder, "quit"));
     
     // Perform any necessary modifications to the interface                                                                                                                           
     g_signal_connect(download, "clicked", G_CALLBACK(download_button), NULL);
@@ -39,6 +40,8 @@ int main(int argc, char* argv[]) {
     g_signal_connect(add_4, "clicked", G_CALLBACK(load_image),fixed);
     g_signal_connect(add_noires, "clicked", G_CALLBACK(load_image),fixed);
     g_signal_connect(window, "button-press-event", G_CALLBACK(print_image), fixed);
+    g_signal_connect(quit, "clicked", G_CALLBACK(on_button_clicked),window);
+
 
 
 
