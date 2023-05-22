@@ -3,7 +3,7 @@
 #include "delete.c"
 #include "new.c"
 #include "quit.c"
-
+#include "convert.c"
 
 int main(int argc, char* argv[]) {
     // Initialize GTK                                                                                                                                                                 
@@ -25,7 +25,8 @@ int main(int argc, char* argv[]) {
     add_4 = GTK_WIDGET(gtk_builder_get_object(builder,"add_4"));
     add_noires = GTK_WIDGET(gtk_builder_get_object(builder,"add_noires"));
     GtkWidget *quit = GTK_WIDGET(gtk_builder_get_object(builder, "quit"));
-    
+    GtkFileChooserButton *convert_button = GTK_WIDGET(gtk_builder_get_object(builder, "convert_button"));
+
     // Perform any necessary modifications to the interface                                                                                                                           
     g_signal_connect(download, "clicked", G_CALLBACK(download_button), NULL);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
@@ -41,8 +42,7 @@ int main(int argc, char* argv[]) {
     g_signal_connect(add_noires, "clicked", G_CALLBACK(load_image),fixed);
     g_signal_connect(window, "button-press-event", G_CALLBACK(print_image), fixed);
     g_signal_connect(quit, "clicked", G_CALLBACK(on_button_clicked),window);
-
-
+    g_signal_connect(convert_button, "file-set", G_CALLBACK(file_selected), fixed);
 
 
     g_object_unref(builder);
