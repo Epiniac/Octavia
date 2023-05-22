@@ -159,7 +159,7 @@ double TakeFrequency(char* wavefile)
 
     frequency /= sfinfo.frames / BUFFER_LEN;
     sf_close(infile);
-    printf("Your frequency is: %.2f Hz\n", frequency);
+    //printf("Your frequency is: %.2f Hz\n", frequency);
     return frequency; 
 }
 
@@ -192,17 +192,22 @@ void ToArray(char *fichier_wave)
    printf("%f\n",max);
 }
 
-int return_n(char* p)
+int* return_n(char* p)
 {
   double frequency;
-  frequency = TakeFrequency(p);
   //char* notes[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
   
-  int n = (int)((12 * log2(frequency/440.0))+49) % 12;
-  return n;
+  int* l_detect = malloc(4);
+  for(int i = 0; i<4; i++)
+  {
+	frequency = TakeFrequency(p);
+	int n = (int)((12 * log2(frequency/440.0))+49) % 12;
+	l_detect[i] = n+(i%3);
+  }
+  return l_detect;
 }
 
-/*int main (int argc, char **argv)
+int main (int argc, char **argv)
 {
   if (argc != 2)
     {
@@ -226,9 +231,12 @@ int return_n(char* p)
       //	n += 12;
       //}
       //n = n % 12;
-      printf("The note is %s\n", notes[return_n(argv[1])]);
+      //printf("The note is %s\n", notes[return_n(argv[1])]);
+      int* tmp = return_n(argv[1]);
+      for(size_t i=0;i<4;i++)
+	      printf("%ld note: %s\n", i, notes[tmp[i]]);
       printf("Done! \n");
 
       return 0;
     }
-} */
+}
