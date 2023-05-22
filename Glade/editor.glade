@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.38.2 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="main_window">
@@ -308,6 +308,20 @@
           <packing>
             <property name="x">330</property>
             <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="quit">
+            <property name="label" translatable="yes">QUIT</property>
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+          </object>
+          <packing>
+            <property name="x">740</property>
+            <property name="y">25</property>
           </packing>
         </child>
       </object>
