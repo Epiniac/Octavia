@@ -12,10 +12,7 @@ int main(int argc, char **argv)
     if (argc != 2)
 	errx(1, "You must put 2 arguments\n");
 
-    SDL_Surface *image = postprocess(argv[1]);
-    IMG_SavePNG(image, "partition.png");
-    SDL_FreeSurface(image);
-    SDL_Quit();
+    postprocess(argv[1]);
     
     return 0;
 }
