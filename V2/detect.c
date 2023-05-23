@@ -207,7 +207,7 @@ int* return_n(char* p)
   return l_detect;
 }
 
-int main (int argc, char **argv)
+/*int main (int argc, char **argv)
 {
   if (argc != 2)
     {
@@ -232,10 +232,10 @@ int main (int argc, char **argv)
       //}
       //n = n % 12;
       //printf("The note is %s\n", notes[return_n(argv[1])]);
-      /*int* tmp = return_n(argv[1]);
+      int* tmp = return_n(argv[1]);
       for(size_t i=0;i<4;i++)
-	      printf("%ld note: %s\n", i, notes[tmp[i]]);*/
+	      printf("%ld note: %s\n", i, notes[tmp[i]]);
       printf("Done! \n");
       return 0;
     }
-}
+}*/
