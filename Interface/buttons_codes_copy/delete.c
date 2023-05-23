@@ -51,26 +51,26 @@ void load_image(GtkButton *widget, gpointer user_data)
 	if(widget == GTK_BUTTON(add_blanches))
 	{
 
-		GtkWidget *blanche = gtk_image_new_from_file("../images/images_notes/note_blanche.png");
+		GtkWidget *blanche = gtk_image_new_from_file("images/images_notes/note_blanche.png");
 		gtk_container_add(GTK_CONTAINER(event_box1), blanche);
 	}
 	else if (widget == GTK_BUTTON(add_noires))
 	{
 
 
-		GtkWidget *noire = gtk_image_new_from_file("../images/images_notes/note_noires.png");
+		GtkWidget *noire = gtk_image_new_from_file("images/images_notes/note_noires.png");
 		gtk_container_add(GTK_CONTAINER(event_box1),noire);
 	}
 	else if(widget == GTK_BUTTON(add_croche))
 	{
 
-		GtkWidget *croche = gtk_image_new_from_file("../images/images_notes/note_croche.png");
+		GtkWidget *croche = gtk_image_new_from_file("images/images_notes/note_croche.png");
 		gtk_container_add(GTK_CONTAINER(event_box1),croche);
 	}
 	else if (widget == GTK_BUTTON(add_4))
 	{
 
-		GtkWidget *croches = gtk_image_new_from_file("../images/images_notes/note_croches.png");
+		GtkWidget *croches = gtk_image_new_from_file("images/images_notes/note_croches.png");
 		gtk_container_add(GTK_CONTAINER(event_box1),croches);
 	}
 
