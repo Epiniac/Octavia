@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicSheet</title>
+  <!----custom css link---->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+
+
+</head>
+
+<body>
+
+  <!---header design--->
+  <header>
+    <a href="index.html" class="logo"><i class='bx bxs-music'></i>Octavia</a>
+
+    <ul class="navbar">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#Staff">Our Team</a></li>
+      <li><a href="#Reviews">Reviews</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <div class="header-icons">
+      <a href="signin.html"><i class='bx bxs-user-circle'></i></a>
+
+    </div>
+  </header>
+
+  <!---home design--->
+  <section class="about-home">
+
+    <div class="home-text">
+      <h1>Easy turn music into a music sheet</h1>
+      <h5>Our innovative app helps you create sheet music with ease</h5>
+      <a href="#more" class="btnn">learn More</a>
+    </div>
+  </section>
+
+
+  <a href="#" class="bottom">Scroll Down<i class='bx bx-down-arrow-circle'></i></a>
+
+	<!-- more section -->
+
+    <section id="more">
+    
+      <div class="container">
+        <p>We are a group named Octavia based in Villejuif and Kremlin-Bicêtre that has set itself the goal of establishing
+          artificial intelligence in the world of music, and thus enabling musicians worldwide
+          to transcribe their favourite music pieces fully automatically.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Staff section -->
+    
+    <section id="Staff">
+    
+      <div class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members"></div>
+      </div>
+    
+      </div>
+    </section>
+
+        
+    <section id="Reviews">
+    
+      <div class="review-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews"></div>
+        <form id="review-form">
+          <h3>Leave a Review</h3>
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+          <label for="rating">Rating:</label>
+          <select id="rating" required>
+            <option value="">Select rating</option>
+            <option value="5">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+          </select>
+          <label for="review">Review:</label>
+          <textarea id="review" required></textarea>
+          <button type="submit">Submit Review</button>
+        </form>
+      </div>
+    
+    </section>
+
+
+<script>
+  const teamMembersSection = document.querySelector('.team-members');
+  const teamMembers = [
+    {
+      name: 'Jacques Chen',
+      jobTitle: 'Project Manager',
+      image: 'img/chen.jpg'
+    },
+    {
+      name: 'Melissa Talbi',
+      jobTitle: 'Member',
+      image: 'img/talbi.jpg'
+    },
+    {
+      name: 'Isaure Beaudrey',
+      jobTitle: 'Member',
+      image: 'img/beaudrey.jpg'
+    },
+    {
+      name: 'Anne-Laure Aissi',
+      jobTitle: 'Member',
+      image: 'img/aissi.jpg'
+    }
+  ];
+
+  teamMembers.forEach(member => {
+    const memberItem = document.createElement('div');
+    memberItem.classList.add('member');
+    memberItem.innerHTML = `
+<img src="${member.image}" alt="${member.name}">
+<h4>${member.name}</h4>
+<p>${member.jobTitle}</p>
+`;
+
+    teamMembersSection.appendChild(memberItem);
+  });
+</script>
+
+</body>
+</html>
