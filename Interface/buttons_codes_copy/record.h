@@ -9,7 +9,7 @@ extern GstElement *encoder;
 extern GstElement *sink;
 
 
-void rec(GtkButton *button, gpointer data);
+void rec(GtkWidget *button, gpointer data);
 void arreterEnregistrement(GtkButton *button, gpointer data);
 
 
