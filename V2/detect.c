@@ -201,8 +201,8 @@ int* return_n(char* p)
   for(int i = 0; i<4; i++)
   {
 	frequency = TakeFrequency(p);
-	int n = (int)((12 * log2(frequency/440.0))+49) % 12;
-	l_detect[i] = (n+(i%3))%12;
+	int n = (int)((12 * log2(frequency/440.0))+49+(i%3)) % 12;
+	l_detect[i] = n-1;
   }
   return l_detect;
 }
