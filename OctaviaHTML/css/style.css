@@ -341,7 +341,6 @@ section{
 	flex-wrap: nowrap;
 	align-items: center;
 	gap: 2rem;
-	background-image: url(img/aboutbg.jpeg);
 }
 .btnn{
 	display: inline-block;
@@ -391,7 +390,6 @@ p{
 	flex-wrap: nowrap;
 	align-items: center;
 	gap: 2rem;
-	background-image: url(img/aboutbg.jpeg);
 }
 
 .team-section {
@@ -449,7 +447,6 @@ p{
 	flex-wrap: nowrap;
 	align-items: center;
 	gap: 2rem;
-	background-image: url(img/aboutbg.jpeg);
 }
 .review-section {
 	margin: 20px 0;
