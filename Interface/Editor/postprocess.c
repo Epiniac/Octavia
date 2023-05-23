@@ -41,11 +41,9 @@ int postprocess(char* p)
 
     // Get melodie
     char* notes[12] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-    int* index = return_n(p); 
-    size_t len = sizeof(index);
-    printf("len = %ld\n", len);
-    char* melodie[len];
-    for (size_t i = 0; i < len; i++)
+    int* index = return_n(p);
+    char* melodie[4];
+    for (size_t i = 0; i < 4; i++)
     {
 	melodie[i] = notes[index[i]];
     }    

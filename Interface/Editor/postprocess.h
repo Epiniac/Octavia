@@ -8,7 +8,7 @@
 
 void save_image(SDL_Renderer* prenderer, SDL_Window* pwindow);
 int postprocess(char* p);
-int return_n(char* p);
+int* return_n(char* p);
 
 #endif
 
