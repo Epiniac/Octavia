@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     if (!pipeline || !source || !encoder || !sink)
     {
         g_printerr("Impossible de créer les éléments du pipeline.\n");
-        return -1;
+	return -1;
     }
 
     // Ajoutez les éléments au pipeline
@@ -42,10 +42,6 @@ int main(int argc, char* argv[]) {
     GtkWidget* window = GTK_WIDGET(gtk_builder_get_object(builder, "main_window"));
     GtkWidget* download = GTK_WIDGET(gtk_builder_get_object(builder, "download_button"));
     GtkWidget *delete_button = GTK_WIDGET(gtk_builder_get_object(builder, "delete_button"));
-    GtkWidget *box1 = GTK_WIDGET(gtk_builder_get_object(builder, "box1"));
-    GtkWidget *box2 = GTK_WIDGET(gtk_builder_get_object(builder, "box2"));
-    GtkWidget *box3 = GTK_WIDGET(gtk_builder_get_object(builder, "box3"));
-    GtkWidget *box4 = GTK_WIDGET(gtk_builder_get_object(builder, "box4"));
     GtkWidget *new_button = GTK_WIDGET(gtk_builder_get_object(builder, "new_button"));
     GtkWidget *fixed = GTK_WIDGET(gtk_builder_get_object(builder, "fixed"));
     add_blanches = GTK_WIDGET(gtk_builder_get_object(builder, "add_blanches"));
@@ -61,10 +57,6 @@ int main(int argc, char* argv[]) {
     g_signal_connect(download, "clicked", G_CALLBACK(download_button), NULL);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
     g_signal_connect(delete_button, "clicked", G_CALLBACK(activate_delete),FALSE);
-    g_signal_connect(box1, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
-    g_signal_connect(box2, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
-    g_signal_connect(box3, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
-    g_signal_connect(box4, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
     g_signal_connect(new_button, "clicked", G_CALLBACK(new_partition), fixed);
     g_signal_connect(add_blanches, "clicked", G_CALLBACK(load_image),fixed);
     g_signal_connect(add_croche, "clicked", G_CALLBACK(load_image),fixed);
@@ -83,4 +75,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-

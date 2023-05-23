@@ -15,7 +15,6 @@ gboolean activate_delete(GtkWidget *widget, GdkEventButton *event, gpointer user
    {
         // Activate the button
         isButtonActivated = TRUE;
-        g_print("Button activated\n");
    }
 }
 
@@ -38,7 +37,6 @@ gboolean on_image_button_press(GtkWidget *widget, GdkEventButton *event, gpointe
     gtk_widget_destroy(widget);
     isButtonActivated = FALSE;
 
-    g_print("On clicked !!!!\n");
     }
 }
 
@@ -82,7 +80,6 @@ void load_image(GtkButton *widget, gpointer user_data)
     load = TRUE;
     //event = event_box;                                                                                                                                                              
     g_signal_connect(event_box1, "button-press-event", G_CALLBACK(on_image_button_press), NULL);
-    g_print("LOAD!\n");
 
 
 }
@@ -106,11 +103,10 @@ gboolean print_image(GtkWidget *widget, GdkEventButton *event, gpointer user_dat
         gtk_widget_translate_coordinates(glade_widget, widget, x, y, &glade_x, &glade_y);
 
         // Afficher les coordonnées relatives à l'interface Glade                                                                                                                     
-        g_print("Position dans l'interface Glade : x = %d, y = %d\n", glade_x, glade_y);
 
         // Afficher les coordonnées de la souris                                                                                                                                      
         //g_print("Position de la souris : x = %f, y = %f\n", x, y);
-        	gtk_fixed_put(GTK_FIXED(fixed), event_box1, glade_x,glade_y);
+        	gtk_fixed_put(GTK_FIXED(fixed), event_box1, glade_x-65,glade_y-135);
         	gtk_widget_show_all(widget);
         	load = FALSE;
 	
